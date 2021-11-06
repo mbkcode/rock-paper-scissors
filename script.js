@@ -1,12 +1,18 @@
 function computerPlay() {
-	if (Math.floor(Math.random() * 3) === 0) {
-		return "Rock";
-	} else if (Math.floor(Math.random() * 3) === 1) {
-		return "Paper";
-	} else if (Math.floor(Math.random() * 3) === 2) {
-		return "Scissor";
+	let randomNumber = Math.floor(Math.random() * 3);
+	switch (randomNumber) {
+		case 0:
+			return "ROCK";
+			break;
+		case 1:
+			return "PAPER";
+			break;
+		case 2:
+			return "SCISSORS";
+			break;
 	}
 }
+const computerSelection = computerPlay();
 
 function playRound(playerSelection, computerSelection) {
 	playerSelection = playerSelection.toUpperCase();
@@ -35,6 +41,9 @@ function playRound(playerSelection, computerSelection) {
 		return "Invalid input";
 	}
 }
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+
+function game(i) {
+	for (let a = 0; a <= i; a++) {
+		console.log(playRound(playerSelection, computerSelection));
+	}
+}
