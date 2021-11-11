@@ -68,3 +68,4 @@ function updateScore() {
 		container.removeEventListener("click", playerPlay);
 	}
 }
+// completed ui adding
